@@ -182,6 +182,7 @@ class DeleteDocumentsData(BaseModel):
     document_ids: list[UUID]
     document_version_ids: list[UUID]
     page_ids: list[UUID]
+    file_paths: list[str] = []  # Add file paths for local deletion
 
 
 class FolderEx(BaseModel):

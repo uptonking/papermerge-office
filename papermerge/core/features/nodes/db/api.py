@@ -779,7 +779,8 @@ async def delete_nodes(
         error = schema.Error(messages=[str(e)])
         return error
 
-    events.delete_documents_s3_data(delete_details)
+    # events.delete_documents_s3_data(delete_details)
+    events.delete_documents_data(delete_details)
     return None
 
 
@@ -832,7 +833,7 @@ async def prepare_documents_s3_data_deletion(
     which are about to be deleted
     """
     stmt = (
-        select(orm.Document.id, orm.DocumentVersion.id, orm.Page.id)
+        select(orm.Document.id, orm.DocumentVersion.id, orm.DocumentVersion.file_name, orm.Page.id)
         .select_from(orm.Document)
         .join(orm.DocumentVersion)
         .join(orm.Page)
@@ -841,16 +842,25 @@ async def prepare_documents_s3_data_deletion(
     doc_ids = set()
     page_ids = set()
     doc_ver_ids = set()
+    file_paths = set()
 
     for row in await db_session.execute(stmt):
         doc_ids.add(row[0])
         doc_ver_ids.add(row[1])
-        page_ids.add(row[2])
+        file_name = row[2]
+        page_ids.add(row[3])
+        
+        # Collect file path for local deletion
+        if file_name:
+            from papermerge.core.pathlib import abs_docver_path
+            file_path = abs_docver_path(row[1], file_name)  # doc_ver_id, file_name
+            file_paths.add(str(file_path))
 
     return DeleteDocumentsData(
         document_ids=list(doc_ids),
         page_ids=list(page_ids),
         document_version_ids=list(doc_ver_ids),
+        file_paths=list(file_paths),  # Add file paths
     )
 
 
