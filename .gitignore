@@ -9,6 +9,8 @@
 # env vars
 
 .envok.yaml
+.env
+.env.local
 
 *.pid
 .idea/

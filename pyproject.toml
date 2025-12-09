@@ -8,12 +8,12 @@ authors = [
 maintainers = [
     { name = "Eugen Ciur", email = "eugen@papermerge.com" }
 ]
-license = "Apache 2.0"
+license = "Apache-2.0"
 readme = "README.md"
-homepage = "https://www.papermerge.com/"
-documentation = "https://docs.papermerge.io/"
+# homepage = "https://www.papermerge.com/"
+# documentation = "https://docs.papermerge.io/"
 classifiers = [
-    "License :: OSI Approved :: Apache Software License",
+    # "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3"
@@ -30,9 +30,9 @@ keywords = [
     "archives",
     "records"
 ]
-packages = [
-    { include = "papermerge/core" },
-]
+# packages = [
+#     { include = "papermerge/core" },
+# ]
 requires-python = ">=3.13,<4"
 dependencies = [
     "redis (>=5.2, <6)",
@@ -65,13 +65,7 @@ Source = "https://github.com/papermerge/papermerge-core"
 
 [project.optional-dependencies]
 cloud = ["botocore (>=1.40.70)", "boto3 (>=1.40.70)", "cryptography (>=46.0.3)"]
-
-[tool.poetry.group.test]
-optional = true
-
-[tool.poetry.group.test.dependencies]
-pytest = "^9.0.2"
-pytest-asyncio = "^1.2.0"
+test = ["pytest>=9.0.2", "pytest-asyncio>=1.2.0"]
 
 [tool.taskipy.settings]
 use_vars = true
@@ -111,6 +105,11 @@ indent-width = 4
 [build-system]
 requires = ["setuptools >= 61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["papermerge*"]
+exclude = ["docker*", "artwork*", "frontend*"]
 
 [tool.pytest.ini_options]
 testpaths = ["papermerge"]
