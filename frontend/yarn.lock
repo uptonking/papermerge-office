@@ -3420,12 +3420,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next-chained-backend@npm:^4.6.2":
-  version: 4.6.2
-  resolution: "i18next-chained-backend@npm:4.6.2"
+"i18next-chained-backend@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "i18next-chained-backend@npm:5.0.1"
   dependencies:
-    "@babel/runtime": "npm:^7.23.2"
-  checksum: 10c0/319d7b69b9c86e6b0684e8506bd7d3ef55fe149695f9b5602ac4f2d335b85efdfbbb771406cd79936ecccf7ab1671055ebf4acd473addd6117d43a0265565270
+    "@babel/runtime": "npm:^7.28.4"
+  checksum: 10c0/cfcfa3e70e41e108b69654c0569f48195ff65f5ae32b4d920d1f935c9608de3e155abd19254d5d0da90fcaedffa8a448096bcab8d5efc95859b1db7525d8ddbb
   languageName: node
   linkType: hard
 
@@ -5164,7 +5164,7 @@ __metadata:
     hooks: "workspace:*"
     i18next: "npm:^25.7.2"
     i18next-browser-languagedetector: "npm:^8.2.0"
-    i18next-chained-backend: "npm:^4.6.2"
+    i18next-chained-backend: "npm:^5.0.1"
     i18next-localstorage-backend: "npm:^4.3.1"
     i18next-xhr-backend: "npm:^3.2.2"
     immer: "npm:^11.0.1"
