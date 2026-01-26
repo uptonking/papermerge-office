@@ -2392,7 +2392,7 @@ __metadata:
     typescript: "npm:^5.9.3"
     typescript-eslint: "npm:^8.48.1"
     vite: "npm:^7.2.7"
-    vite-tsconfig-paths: "npm:^5.1.4"
+    vite-tsconfig-paths: "npm:^6.0.5"
   languageName: unknown
   linkType: soft
 
@@ -3349,7 +3349,7 @@ __metadata:
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.48.1"
     vite: "npm:^7.2.7"
-    vite-tsconfig-paths: "npm:^5.1.4"
+    vite-tsconfig-paths: "npm:^6.0.5"
   languageName: unknown
   linkType: soft
 
@@ -3755,7 +3755,7 @@ __metadata:
     typescript: "npm:^5.9.3"
     typescript-eslint: "npm:^8.48.1"
     vite: "npm:^7.2.7"
-    vite-tsconfig-paths: "npm:^5.1.4"
+    vite-tsconfig-paths: "npm:^6.0.5"
   languageName: unknown
   linkType: soft
 
@@ -5185,7 +5185,7 @@ __metadata:
     viewer: "workspace:*"
     vite: "npm:^7.2.7"
     vite-plugin-static-copy: "npm:^3.1.4"
-    vite-tsconfig-paths: "npm:^5.1.4"
+    vite-tsconfig-paths: "npm:^6.0.5"
     vitest: "npm:^4.0.15"
   languageName: unknown
   linkType: soft
@@ -5366,7 +5366,7 @@ __metadata:
     typescript-eslint: "npm:^8.48.1"
     viewer: "workspace:*"
     vite: "npm:^7.2.7"
-    vite-tsconfig-paths: "npm:^5.1.4"
+    vite-tsconfig-paths: "npm:^6.0.5"
   languageName: unknown
   linkType: soft
 
@@ -5398,19 +5398,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-tsconfig-paths@npm:^5.1.4":
-  version: 5.1.4
-  resolution: "vite-tsconfig-paths@npm:5.1.4"
+"vite-tsconfig-paths@npm:^6.0.5":
+  version: 6.0.5
+  resolution: "vite-tsconfig-paths@npm:6.0.5"
   dependencies:
     debug: "npm:^4.1.1"
     globrex: "npm:^0.1.2"
     tsconfck: "npm:^3.0.3"
   peerDependencies:
     vite: "*"
-  peerDependenciesMeta:
-    vite:
-      optional: true
-  checksum: 10c0/6228f23155ea25d92b1e1702284cf8dc52ad3c683c5ca691edd5a4c82d2913e7326d00708cef1cbfde9bb226261df0e0a12e03ef1d43b6a92d8f02b483ef37e3
+  checksum: 10c0/c62dd84804b9d2d35460146bda0bb752d270043d805df0e806ade6a9bbf37c5ad5da8a29d822b89931821545c201bc7ca07c594f245aebabe92d51d0cd1b63df
   languageName: node
   linkType: hard
 
